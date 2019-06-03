@@ -4,7 +4,7 @@ FROM openjdk:12.0.1-jdk-oracle AS builder
 
 ADD . /work
 WORKDIR /work
-RUN --mount=type=cache,target=/root/.gradle ./gradlew clean build
+RUN ./gradlew clean build
 
 FROM openjdk:12.0.1-jdk-oracle AS runner
 
