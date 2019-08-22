@@ -19,6 +19,7 @@ public class DemoController {
     @GetMapping("/version")
     @ResponseBody
     public String getVersion() {
+        System.out.println("getVersion");
         return "{\"version\": \"" + version + "\"}";
     }
 
